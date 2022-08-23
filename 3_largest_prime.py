@@ -2,18 +2,23 @@
 
 import math
 
-#checking for primality
+# checking for primality
+
+
 def isprime(num):
-    for n in range(2,int(math.sqrt(num))+1):
-        if num%n==0:
+    for n in range(2, int(math.sqrt(num))+1):
+        if num % n == 0:
             return False
     return True
 
-#checking for prime factors
+# checking for largest prime factors
+
+
 def largest_factor(value):
-    for i in range (2, value):
-        if isprime(i) == True:
+    for i in range(2, value):
+        if isprime(i):
             if value % i == 0:
                 print(i)
+
 
 largest_factor(600851475143)
