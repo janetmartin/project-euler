@@ -17,7 +17,6 @@ def max_palindrome(val1, val2):
                     product1 = product2
     return product1
 
-
 # testcase
 # print(max_palindrome(10, 99))
 print(max_palindrome(100, 999))
