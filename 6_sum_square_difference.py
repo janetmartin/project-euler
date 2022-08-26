@@ -7,5 +7,6 @@ def sum_of_squares(end):
         squares += i**2
     return sum(range(end + 1))**2 - squares
 
+
 print("Test Case:", sum_of_squares(10))
 print("Solution:", sum_of_squares(100))
