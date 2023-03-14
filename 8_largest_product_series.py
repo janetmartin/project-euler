@@ -11,7 +11,7 @@ value = 731671765313306249192251196744265747423553491949349698352031277450632623
 
 # Solution
 i = 13  # number of digits in interval
-product = 0  # define product variable, and set to zreo
+product = 0  # define product variable, and set to zero
 b = str(value)  # convert value to a string so that string methods can be used to index value
 while len(b) >= i:  # while i digits exist run the following loop
     calc = int(b[0]) * int(b[1]) * int(b[2]) * int(b[3]) * int(b[4]) * int(b[5]) * int(b[6]) * int(b[7]) * int(b[8]) * int(b[9]) * int(b[10]) * int(b[11]) * int(b[12])  # calculate the product by multipying the values returned by the index, note that after value is indeed it must be converted to an integer in order to find the product.
