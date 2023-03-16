@@ -18,31 +18,27 @@ def sieve(n):
     multiples = []
     primes = []
 
-
-
     for i in range(2, n+1):
-        if i not in multiples: # the prime test, if a multiple of n is not in the generated list, then n is prime (only being divisable by itself and one).
+        if i not in multiples:  # the prime sieve
             primes.append(i)
             for j in range(i*i, n+1, i):
                 multiples.append(j)
     print(sum(primes))
 
 
-
-
 # Solution 2: A faster sieve
 # optimized solution from https://algodaily.com/challenges/sum-all-primes/python
 
-def sumOfPrimes(n):
+def sumofprimes(n):
     if n <= 1:
-        return 1 # not considered a prime
+        return 1  # not considered a prime
 
     prime = [True] * (n + 1)  # list to store if number is prime number
 
-    p = 2 # start at 2
-    while p * p <= n: # continue loop until upper bound
+    p = 2  # start at 2
+    while p * p <= n:  # continue loop until upper bound
         # if p is not changed in prime, then it is prime number
-        if prime[p] == True:
+        if prime[p] is True:
             i = p * 2  # update all multiples of p
 
             while i <= n:
@@ -50,10 +46,11 @@ def sumOfPrimes(n):
                 i += p
         p += 1
 
-    totalSum = 0
+    totalsum = 0
     for i in range(2, n + 1):  # find the sum by looking into prime list
         if prime[i]:
-            totalSum += i
-    return totalSum
+            totalsum += i
+    return totalsum
 
-sumOfPrimes(2000000))
+
+print(sumofprimes(2000000))
